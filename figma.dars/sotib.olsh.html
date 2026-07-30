@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Clicon</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/sotibolsh.css">
+</head>
+<body>
+
+  <div class="top-header">
+    <div class="container top-header-row">
+      <p>Welcome to Clicon online eCommerce store.</p>
+      <div class="top-header-right">
+        <span>Follow us:</span>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+        <a href="#"><i class="fa-brands fa-reddit-alien"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <span class="divider">|</span>
+        <select class="lang-select"><option>Eng</option></select>
+        <select class="lang-select"><option>USD</option></select>
+      </div>
+    </div>
+  </div>
+
+  <header class="main-header">
+    <div class="container main-header-row">
+      <div class="logo">
+        <i class="fa-solid fa-circle" style="color: #fa8232;"></i> <strong>CLICON</strong>
+      </div>
+      <div class="search-bar-box">
+        <input type="text" placeholder="Search for anything...">
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
+      </div>
+      <div class="header-actions">
+        <a href="boburX.html"><i class="fa-solid fa-cart-shopping"></i><span class="badge-count">2</span></a>
+        <a href="wishlist.html"><i class="fa-solid fa-heart"></i><span class="badge-count">4</span></a>
+        <a href="boburX.html"><i class="fa-regular fa-user"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <nav class="nav-bar">
+    <div class="container nav-row">
+      <div class="all-categories-btn">
+        <i class="fa-solid fa-bars"></i> All Category <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="nav-links">
+        <a href="royhat.html"><i class="fa-solid fa-location-dot"></i> Track Order</a>
+        <a href="#">Compare</a>
+        <a href="#">Customer Support</a>
+        <a href="#">Need Help</a>
+      </div>
+      <div class="nav-phone">
+        <i class="fa-solid fa-phone-volume"></i> +1-202-555-0104
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="breadcrumb" style="margin: 20px 0;">
+      <a href="boburX.html">Home</a> <i class="fa-solid fa-chevron-right"></i>
+      <a href="#">Shopping Cart</a> <i class="fa-solid fa-chevron-right"></i>
+      <span class="current">Checkout</span>
+    </div>
+  </div>
+
+  <div class="container checkout-container">
+    <form onsubmit="handlePlaceOrder(event)" class="checkout-grid">
+      
+      <div class="billing-card">
+        <h2>Billing Information</h2>
+        
+        <div class="form-row">
+          <div class="form-group">
+            <label>User name</label>
+            <input type="text" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label>&nbsp;</label>
+            <input type="text" placeholder="Last name" required>
+          </div>
+          <div class="form-group">
+            <label>Company Name <span class="optional">(Optional)</span></label>
+            <input type="text" placeholder="Company Name">
+          </div>
+        </div>
+
+        <div class="form-group full-width">
+          <label>Address</label>
+          <input type="text" placeholder="House number and street name" required>
+        </div>
+
+        <div class="form-row-3">
+          <div class="form-group">
+            <label>Country</label>
+            <select><option>Select...</option><option>Uzbekistan</option></select>
+          </div>
+          <div class="form-group">
+            <label>Region/State</label>
+            <select><option>Select...</option><option>Tashkent</option></select>
+          </div>
+          <div class="form-group">
+            <label>City</label>
+            <select><option>Select...</option><option>Tashkent</option></select>
+          </div>
+          <div class="form-group">
+            <label>Zip Code</label>
+            <input type="text" placeholder="Zip Code">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="Email address" required>
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" placeholder="Phone number" required>
+          </div>
+        </div>
+
+        <div class="checkbox-group">
+          <input type="checkbox" id="shipDiff">
+          <label for="shipDiff">Ship into different address</label>
+        </div>
+
+        <h2 style="margin-top: 30px;">Payment Option</h2>
+        <div class="payment-options">
+          <label class="payment-card"><input type="radio" name="payment" checked> <span>Cash on Delivery</span></label>
+          <label class="payment-card"><input type="radio" name="payment"> <span>Venmo</span></label>
+          <label class="payment-card"><input type="radio" name="payment"> <span>Paypal</span></label>
+          <label class="payment-card"><input type="radio" name="payment"> <span>Amazon Pay</span></label>
+          <label class="payment-card"><input type="radio" name="payment"> <span>Debid/Credit Card</span></label>
+        </div>
+
+        <div class="form-group full-width" style="margin-top: 20px;">
+          <label>Name on Card</label>
+          <input type="text" placeholder="John Doe">
+        </div>
+        <div class="form-group full-width">
+          <label>Card Number</label>
+          <input type="text" placeholder="1234 5678 9012 3456">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Expire Date</label>
+            <input type="text" placeholder="DD/YY">
+          </div>
+          <div class="form-group">
+            <label>CVC</label>
+            <input type="text" placeholder="CVC">
+          </div>
+        </div>
+
+        <h2 style="margin-top: 30px;">Additional Information</h2>
+        <div class="form-group full-width">
+          <label>Order Notes <span class="optional">(Optional)</span></label>
+          <textarea rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+        </div>
+      </div>
+
+      <div class="order-summary-card">
+        <h3>Order Summary</h3>
+        
+        <div class="summary-item">
+          <img src="https://via.placeholder.com/50" alt="Product">
+          <div class="summary-info">
+            <p>Canon EOS 1500D DSLR Camera Body+ 18-...</p>
+            <span>1 x $70</span>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <img src="https://via.placeholder.com/50" alt="Product">
+          <div class="summary-info">
+            <p>Wired Over-Ear Gaming Headphones with 18-...</p>
+            <span>3 x $250</span>
+          </div>
+        </div>
+
+        <div class="summary-calc">
+          <div class="calc-row"><span>Sub-total</span> <strong>$320</strong></div>
+          <div class="calc-row"><span>Shipping</span> <strong>Free</strong></div>
+          <div class="calc-row"><span>Discount</span> <strong>$24</strong></div>
+          <div class="calc-row"><span>Tax</span> <strong>$61.99</strong></div>
+        </div>
+
+        <div class="calc-total">
+          <span>Total</span>
+          <strong>$357.99 USD</strong>
+        </div>
+
+        <a href="/yangi.html" class="place-order-btn" style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+  PLACE ORDER <i class="fa-solid fa-arrow-right"></i>
+</a>
+
+    </form>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+          <i class="fa-solid fa-circle" style="color: #fa8232;"></i> <strong>CLICON</strong>
+        </div>
+        <div class="support-info">
+          <span class="support-label">Customer Supports:</span>
+          <a href="tel:6295550129" class="support-phone">(629) 555-0129</a>
+        </div>
+        <p class="footer-address">4517 Washington Ave. Manchester, Kentucky 39495</p>
+        <a href="mailto:info@kinbo.com" class="footer-email">info@kinbo.com</a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">TOP CATEGORY</h4>
+        <ul class="footer-links">
+          <li><a href="sayit.html">Computer & Laptop</a></li>
+          <li><a href="#">SmartPhone</a></li>
+          <li><a href="#">Headphone</a></li>
+          <li><a href="#" class="active-cat">Accessories</a></li>
+          <li><a href="#">Camera & Photo</a></li>
+          <li><a href="#">TV & Homes</a></li>
+        </ul>
+        <a href="boburX.html" class="browse-all-btn">Browse All Product <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">QUICK LINKS</h4>
+        <ul class="footer-links">
+          <li><a href="#">Shop Product</a></li>
+          <li><a href="#">Shoping Cart</a></li>
+          <li><a href="#">Wishlist</a></li>
+          <li><a href="#">Compare</a></li>
+          <li><a href="royhat.html">Track Order</a></li>
+          <li><a href="#">Customer Help</a></li>
+          <li><a href="#">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">DOWNLOAD APP</h4>
+        <div class="app-store-buttons">
+          <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i><div><span>Get it now</span><strong>Google Play</strong></div></a>
+          <a href="#" class="app-btn"><i class="fa-brands fa-app-store"></i><div><span>Get it now</span><strong>App Store</strong></div></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">POPULAR TAG</h4>
+        <div class="tag-cloud">
+          <a href="#">Game</a><a href="#">iPhone</a><a href="#">TV</a><a href="#">Asus Laptops</a>
+          <a href="#">Macbook</a><a href="#">SSD</a><a href="#" class="tag-highlight">Graphics Card</a>
+          <a href="#">Power Bank</a><a href="#">Smart TV</a><a href="#">Speaker</a>
+          <a href="#">Tablet</a><a href="#">Microwave</a><a href="#">Samsung</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container">
+        <p>Kinbo-eCommerce Template © 2021. Design by Templatecookie</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/satsh.js"></script>
+</body>
+</html>
